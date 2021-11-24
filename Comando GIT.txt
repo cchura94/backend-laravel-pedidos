@@ -1,0 +1,18 @@
+- iniciar un nuevo repositorio
+git init 
+
+- Puedes registrar cambios (añadirlos al Index) usando
+git add .
+
+- Para hacer commit a estos cambios usa
+git commit -m "mensaje"
+
+------------------------------
+crear el repositorio remoto en github o bitbucket o gitlab
+..............................
+
+- conectar tu repositorio local a un repositorio remoto
+git remote add origin <direccion_rep_remoto>
+
+- Ahora podrás subir tus cambios al repositorio remoto seleccionado
+git push origin master
