@@ -1,0 +1,18 @@
+POST http://127.0.0.1:8000/api/auth/login
+Content-Type: application/json
+
+{
+    "email": "cchura.cpc@gmail.com",
+    "password": "cristian54321"
+}
+
+### perfil
+POST http://127.0.0.1:8000/api/auth/me
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNzcxMjk3MywiZXhwIjoxNjM3NzE2NTczLCJuYmYiOjE2Mzc3MTI5NzMsImp0aSI6IjJzZ3Q1bHdka25QbDFLVUciLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.hZZtnzupTVrMNAsMcDhLX5Rr4txRscdlDxf_UOZLSmg
+
+### LOGOUT
+
+POST http://127.0.0.1:8000/api/auth/logout
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNzcxMjk3MywiZXhwIjoxNjM3NzE2NTczLCJuYmYiOjE2Mzc3MTI5NzMsImp0aSI6IjJzZ3Q1bHdka25QbDFLVUciLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.hZZtnzupTVrMNAsMcDhLX5Rr4txRscdlDxf_UOZLSmg
