@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Categoria;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Validation\Rule;
 
 class CategoriaController extends Controller
 {
@@ -48,7 +50,20 @@ class CategoriaController extends Controller
      */
     public function show($id)
     {
-        //
+        /*$categoria = Categoria::find($id);
+
+        $categoria->subcategorias;
+
+        return $categoria;
+        */
+        $categoria = DB::table("categorias")->select("nombre")->find($id);
+
+        $subcategorias = DB::table("subcategorias")
+                        ->where("subcategorias.categoria_id", $id)
+                        ->select("id", "nombre")
+                        ->get();
+        $categoria->sub_categorias = $subcategorias;
+        return $categoria;
     }
 
     /**
@@ -60,7 +75,22 @@ class CategoriaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $mi_id = $id;
+        // validar
+        $request->validate([
+            "nombre" => "required|min:3|max:50|unique:categorias,nombre,$mi_id",
+            // 'nombre' => ['required', 'min:3', 'max:50', Rule::unique('categorias')->ignore($id, 'mi_id')],
+            "detalle" => "string"
+        ]);
+
+        $categoria = Categoria::find($id);
+        // modificar
+        $categoria->nombre = $request->nombre;
+        $categoria->detalle = $request->detalle;
+        $categoria->save();
+
+        return response()->json(["mensaje" => "Categoria Modificada", "data" => $categoria], 201);
+  
     }
 
     /**

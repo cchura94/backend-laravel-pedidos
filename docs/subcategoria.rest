@@ -1,0 +1,14 @@
+GET http://127.0.0.1:8000/api/subcategoria
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzODIyNjA2NCwiZXhwIjoxNjM4MjI5NjY0LCJuYmYiOjE2MzgyMjYwNjQsImp0aSI6Imd2d2hZbmdEYU90ZHZKQ2MiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.DEr1CvdI6QOIfRmiVs_qiXJnn3A_jJv7nPgkLbmQct0
+
+### Guardar SubCategoria
+POST http://127.0.0.1:8000/api/subcategoria
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzODIyNjA2NCwiZXhwIjoxNjM4MjI5NjY0LCJuYmYiOjE2MzgyMjYwNjQsImp0aSI6Imd2d2hZbmdEYU90ZHZKQ2MiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.DEr1CvdI6QOIfRmiVs_qiXJnn3A_jJv7nPgkLbmQct0
+
+{
+    "nombre": "Zapato color negro",
+    "categoria_id": 2
+}
