@@ -7,6 +7,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\PedidoController;
+use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\SubcategoriaController;
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
